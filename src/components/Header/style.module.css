@@ -1,0 +1,17 @@
+.headerBlock {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header {
+  height: 72px;
+  background-color: #ffffff;
+  box-shadow: inset 0px -1px 0px #e7e9f0;
+}
+
+.progressBar {
+  height: 4px;
+  width: 20%;
+  background-color: #61ad15;
+}
