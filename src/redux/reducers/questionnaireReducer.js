@@ -4,12 +4,13 @@ import { ActionType } from '../constants/questionnaireConstants';
 
 const { SET_STEP } = ActionType;
 
-const stepInitialState = 1;
+export const stepInitialState = 1;
 
 const stepReducer = (state = stepInitialState, { type, payload }) => {
   switch (type) {
     case SET_STEP: {
-      return payload;
+      state = payload;
+      return state;
     }
     default:
       return state;
