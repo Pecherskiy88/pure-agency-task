@@ -1,0 +1,22 @@
+.inputBlock {
+  margin-top: 31px;
+}
+
+.input {
+  width: 100%;
+  color: #a8acbc;
+  padding: 11px 0 11px 16px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  border: 1px solid #e7e9f0;
+  border-radius: 4px;
+}
+
+.label {
+  margin: 0;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 21px;
+  color: #5d606b;
+}

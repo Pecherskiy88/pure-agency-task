@@ -18,6 +18,22 @@ const MyButton = ({ type, name, handleClick }) => {
   );
 };
 
+MyButton.defaultProps = {
+  type: 'primary',
+  name: 'primary',
+  handleClick: () => {
+    console.log('CLICK');
+  },
+};
+
+MyButton.propTypes = {
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
+
+export default MyButton;
+
 const useStyles = makeStyles({
   primary: {
     width: '148px',
@@ -50,19 +66,3 @@ const useStyles = makeStyles({
     paddingLeft: '14px',
   },
 });
-
-MyButton.defaultProps = {
-  type: 'primary',
-  name: 'primary',
-  handleClick: () => {
-    console.log('CLICK');
-  },
-};
-
-MyButton.propTypes = {
-  type: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
-};
-
-export default MyButton;

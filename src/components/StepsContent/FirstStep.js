@@ -1,33 +1,52 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { setEmploymentStatus } from '../../redux/actions/questionnaireActions';
+import { employmentSelector } from '../../redux/selectors/questionnaireSelectors';
 
 import Title from '../../atoms/Title';
 import Radio from '../../atoms/Radio';
 
 import s from './style.module.css';
 
-const questionsArray = [
-  { text: 'Employed', value: 10, id: 1 },
-  { text: 'Unemployed', value: 20, id: 2 },
-  { text: 'Self-employed', value: 30, id: 3 },
-];
-
 const FirstStep = () => {
-  const renderItems =
-    questionsArray.length > 0
-      ? questionsArray.map((el) => (
-          <div className={s.item} key={el.id}>
-            <Radio />
-            <span className={s.itemText}>{el.text}</span>
-          </div>
-        ))
-      : [];
+  const dispatch = useDispatch();
+  const employmentValue = useSelector((state) => employmentSelector(state));
+
+  const handleChange = (event) => {
+    const { value } = event.target;
+    dispatch(setEmploymentStatus(Number(value)));
+  };
 
   return (
     <>
-      <div className={s.titleBlock}>
-        <Title text="What is your employment status?" />
+      <Title text="What is your employment status?" />
+      <div className={s.list}>
+        <div className={s.item}>
+          <Radio
+            checked={employmentValue === 10 ? true : false}
+            value={10}
+            onChange={handleChange}
+          />
+          <span className={s.itemText}>Employed</span>
+        </div>
+        <div className={s.item}>
+          <Radio
+            checked={employmentValue === 20 ? true : false}
+            value={20}
+            onChange={handleChange}
+          />
+          <span className={s.itemText}>Unemployed</span>
+        </div>
+        <div className={s.item}>
+          <Radio
+            checked={employmentValue === 30 ? true : false}
+            value={30}
+            onChange={handleChange}
+          />
+          <span className={s.itemText}>Self-employed</span>
+        </div>
       </div>
-      <div className={s.list}>{renderItems}</div>
     </>
   );
 };

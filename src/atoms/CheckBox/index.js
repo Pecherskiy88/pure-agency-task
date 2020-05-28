@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Radio from '@material-ui/core/Radio';
 
-const MyRadio = (props) => {
-  return <GreenRadio {...props} />;
+import Checkbox from '@material-ui/core/Checkbox';
+
+const MyCheckbox = (props) => {
+  return <GreenCheckbox {...props} />;
 };
 
-MyRadio.propTypes = {
+MyCheckbox.propTypes = {
   onChange: PropTypes.func.isRequired,
   value: PropTypes.number.isRequired,
   checked: PropTypes.bool.isRequired,
 };
 
-export default MyRadio;
+export default MyCheckbox;
 
-const GreenRadio = withStyles({
+const GreenCheckbox = withStyles({
   root: {
     padding: 0,
     color: '#61AD15',
@@ -24,4 +25,4 @@ const GreenRadio = withStyles({
     },
   },
   checked: {},
-})((props) => <Radio color="default" {...props} />);
+})((props) => <Checkbox color="default" {...props} />);

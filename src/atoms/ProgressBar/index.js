@@ -31,11 +31,11 @@ ProgressBar.propTypes = {
   currentStep: PropTypes.number.isRequired,
 };
 
+export default ProgressBar;
+
 const MyProgressBar = styled.div`
   height: 4px;
   width: ${(props) => props.currentWidth}%;
   background-color: #61ad15;
   transition: all 0.5s ease-in-out;
 `;
-
-export default ProgressBar;

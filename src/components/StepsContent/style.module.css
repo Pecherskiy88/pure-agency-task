@@ -1,13 +1,10 @@
-.titleBlock {
-  margin-bottom: 34px;
-}
-
 .list {
   width: 100%;
   background-color: #ffffff;
   border: 1px solid #e7e9f0;
   box-shadow: 0px 4px 8px rgba(41, 47, 66, 0.07);
   border-radius: 4px;
+  margin-top: 34px;
 }
 
 .list > .item:nth-child(even) {
