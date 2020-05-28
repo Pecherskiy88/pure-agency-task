@@ -50,6 +50,18 @@ const useStyles = makeStyles({
     },
     boxShadow: 'none',
   },
+  disabled: {
+    width: '148px',
+    backgroundColor: '#F4F6F9',
+    color: '#A8ACBC',
+    textTransform: 'capitalize',
+    '& > *': {
+      fontSize: '16px',
+      lineHeight: '26px',
+      fontWeight: 'normal',
+    },
+    boxShadow: 'none',
+  },
   secondary: {
     width: '84px',
     backgroundColor: '#fff',
@@ -61,6 +73,9 @@ const useStyles = makeStyles({
       lineHeight: '26px',
       fontWeight: 'normal',
     },
+  },
+  hidden: {
+    display: 'none',
   },
   icon: {
     paddingLeft: '14px',

@@ -24,7 +24,7 @@ export const makeTotalAmount = (
   }
 
   const totalAmount =
-    multiplier !== 0
+    multiplier !== 0 && employmentValue === 30
       ? (employmentValue + totalAmountOfCheckedStatuses) * multiplier
       : employmentValue + totalAmountOfCheckedStatuses;
 
