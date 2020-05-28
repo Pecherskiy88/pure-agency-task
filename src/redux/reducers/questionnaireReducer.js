@@ -21,7 +21,7 @@ const stepReducer = (state = stepInitialState, { type, payload }) => {
   }
 };
 
-const employmentInitialState = 20;
+const employmentInitialState = 10;
 
 const employmentReducer = (
   state = employmentInitialState,
