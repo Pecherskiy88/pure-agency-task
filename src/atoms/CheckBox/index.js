@@ -10,7 +10,6 @@ const MyCheckbox = (props) => {
 
 MyCheckbox.propTypes = {
   onChange: PropTypes.func.isRequired,
-  value: PropTypes.number.isRequired,
   checked: PropTypes.bool.isRequired,
 };
 

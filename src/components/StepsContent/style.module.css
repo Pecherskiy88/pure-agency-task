@@ -23,3 +23,15 @@
   color: #333848;
   padding-left: 28px;
 }
+
+.description {
+  font-size: 16px;
+  line-height: 26px;
+  color: #5d606b;
+  margin: 0;
+  text-align: center;
+}
+
+.finalBlock {
+  margin: 32px 0 0 0;
+}
